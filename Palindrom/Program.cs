@@ -12,10 +12,8 @@ namespace Palindrom
 
 		static void Main(string[] args)
 		{
-			string word;
-
 			Console.WriteLine("Enter Word: ");
-			word = Console.ReadLine();
+			var word = Console.ReadLine();
 
 			Console.WriteLine($"{word} is palidrome: {IsTextPalindrome(word)}");
 
