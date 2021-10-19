@@ -10,9 +10,6 @@ namespace Palindrom
 		//V kterémkoliv jazyce vytvořte metodu, která ověří, jestli je zadaný text palindrom tj.je možné ho číst stejně od konce i od začátku.
 		//Vstupem metody bude text a výstupem boolovská hodnota.
 
-		//V kterémkoliv jazyce vytvořte metodu, která ověří, jestli je ze zadaného textu možné sestavit palindrom.
-		//Vstupem metody bude text a výstupem boolovská hodnota.Přklad: "aabbc" vratí true, protože text je možné přeskládat na "abcba".
-
 		static void Main(string[] args)
 		{
 			string word;
