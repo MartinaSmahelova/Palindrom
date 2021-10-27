@@ -24,7 +24,7 @@ namespace Palindrom
 			Console.WriteLine("Enter Word: ");
 			var word2 = Console.ReadLine();
 
-			Console.WriteLine($"{word} is possible to create palindrome: {IsPossibleFromTextCreatePalindrome(word)}");
+			Console.WriteLine($"{word} is possible to create palindrome: {IsPossibleToCreatePalindromeFromText(word)}");
 
 
 			Console.ReadKey();
@@ -42,7 +42,7 @@ namespace Palindrom
 			return word.Equals(wordFromLastCharacter, StringComparison.OrdinalIgnoreCase);
 		}
 
-		public static bool IsPossibleFromTextCreatePalindrome(string word)
+		public static bool IsPossibleToCreatePalindromeFromText(string word)
 		{
 			var word1 = word.ToLower();
 			var distinctWord = word1.Distinct().ToList();
