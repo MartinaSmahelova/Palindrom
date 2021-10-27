@@ -7,15 +7,25 @@ namespace Palindrom
 {
 	class Program
 	{
-		//V kterémkoliv jazyce vytvořte metodu, která ověří, jestli je zadaný text palindrom tj.je možné ho číst stejně od konce i od začátku.
-		//Vstupem metody bude text a výstupem boolovská hodnota.
-
+		
 		static void Main(string[] args)
 		{
+			//V kterémkoliv jazyce vytvořte metodu, která ověří, jestli je zadaný text palindrom tj.je možné ho číst stejně od konce i od začátku.
+			//Vstupem metody bude text a výstupem boolovská hodnota.
+
 			Console.WriteLine("Enter Word: ");
 			var word = Console.ReadLine();
 
-			Console.WriteLine($"{word} is palidrome: {IsTextPalindrome(word)}");
+			Console.WriteLine($"{word} is palindrome: {IsTextPalindrome(word)}");
+
+			// V kterémkoliv jazyce vytvořte metodu, která ověří, jestli je ze zadaného textu možné sestavit palindrom.
+			// Vstupem metody bude text a výstupem boolovská hodnota. Přklad: "aabbc" vratí true, protože text je možné přeskládat na "abcba".
+
+			Console.WriteLine("Enter Word: ");
+			var word2 = Console.ReadLine();
+
+			Console.WriteLine($"{word} is possible to create palindrome: {IsPossibleFromTextCreatePalindrome(word)}");
+
 
 			Console.ReadKey();
 		}
@@ -30,6 +40,13 @@ namespace Palindrom
 			}
 
 			return word.Equals(wordFromLastCharacter, StringComparison.OrdinalIgnoreCase);
+		}
+
+		public static bool IsPossibleFromTextCreatePalindrome(string word)
+		{
+			var word1 = word.ToLower();
+			var distinctWord = word1.Distinct().ToList();
+			return ((distinctWord.Count * 2) - word1.Length) == 1 || ((distinctWord.Count * 2) - word1.Length) == 0;
 		}
 	}
 }
